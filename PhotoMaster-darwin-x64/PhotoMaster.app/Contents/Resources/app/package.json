@@ -1,0 +1,19 @@
+{
+  "name": "photomaster-electron-app",
+  "productName": "PhotoMaster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "build": "rimraf Photomaster-* && electron-packager . --platform=darwin,win32,linux --arch=x64 --icon=app",
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Omar Imam <omar.imam@kineticvortex.com> (https://github.com/flowmar)",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "1.7.8",
+    "electron-packager": "9.1.0",
+    "rimraf": "2.6.2"
+  }
+}
