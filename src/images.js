@@ -21,7 +21,7 @@ exports.save = (picturesPath, contents, done) => {
 
     // Replace the extra
     const base64Data = contents.replace(/^data:image\/png;base64,/, '');
-    const imgPath = path.join(picturesPath, `${new Date()}.png`);
+    const imgPath = path.join(picturesPath, `${new Date().getTime()}.png`);
     fs.writeFile(imgPath, base64Data, {
         encoding: 'base64'
     }, err => {
