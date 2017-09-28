@@ -7,6 +7,8 @@
 // Dependencies
 const fs = require('fs');
 const path = require('path');
+const shell = require('electron').shell;
+const spawn = require('child_process').spawn;
 
 // Function to log errors to the console
 const logError = err => err && console.error(err);
@@ -66,4 +68,18 @@ exports.cache = imgPath => {
 // Returns the cache
 exports.getFromCache = index => {
     return images[index];
+}
+
+const openCmds = {
+    darwin: 'open',
+    win32: 'explorer',
+    linux: 'nautilus'
+}
+
+exports.openDir = dirPath => {
+    const cmd = openCmds[process.platform];
+    if (cmd)
+        spawn(cmd, [dirPath]);
+    else
+        shell.showItemInFolder(dirPath);
 }

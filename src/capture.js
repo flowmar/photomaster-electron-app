@@ -68,7 +68,7 @@ window.addEventListener('DOMContentLoaded', _ => {
     canvasTarget = seriously.target('#canvas');
 
     // effects.choose(seriously, source, target, effectName)
-    effects.choose(seriously, videoSrc, canvasTarget, 'ascii');
+    effects.choose(seriously, videoSrc, canvasTarget);
 
     // Initializes video.js
     video.init(navigator, videoEl);

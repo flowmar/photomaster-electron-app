@@ -18,7 +18,7 @@ app.on('ready', _ => {
 
     // Create a new window
     mainWindow = new BrowserWindow({
-        width: 1200,
+        width: 893,
         height: 725,
         resizable: false
     });
@@ -27,7 +27,7 @@ app.on('ready', _ => {
     mainWindow.loadURL(`file://${__dirname}/capture.html`)
 
     // Automatically open DevTools
-    mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
 
     // Make the pictures directory
     images.mkdir(images.getPicturesDir(app));
