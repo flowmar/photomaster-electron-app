@@ -1,0 +1,16 @@
+{
+  "name": "photomaster-electron-app",
+  "productName": "PhotoMaster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Omar Imam <omar.imam@kineticvortex.com> (https://github.com/flowmar)",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "1.7.8"
+  }
+}
